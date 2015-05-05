@@ -1,6 +1,6 @@
 {
     "name": "valorin/pinpusher",
-    "description": "Pebble Timeline Pin generator and pusher.",
+    "description": "Simple Pebble Timeline Pin generator and pusher API wraper for PHP.",
     "type": "library",
     "require": {
         "guzzle/guzzle": "^3.9"
