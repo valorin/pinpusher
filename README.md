@@ -66,3 +66,28 @@ composer require valorin/pinpusher
         - openWatchApp
     - launchCode *(TODO)*
 - Notifications (Icons) *(TODO)*
+- Create a Pin *(TODO)*
+- Update a Pin *(TODO)*
+- Delete a Pin *(TODO)*
+- Create a Shared Pin *(TODO)*
+- Delete a Shared Pin *(TODO)*
+- Listing Topic Subscriptions *(TODO)*
+- Error Handling *(TODO)*
+
+## Usage
+
+```
+use Valorin\PinPusher\Pusher;
+use Valorin\PinPusher\Pin;
+
+$pin = new Pin(
+    new DateTime('2015-05-05 15:00:00'),
+    new Pin\GenericLayout(
+        'This is a generic pin.',
+        Pin\Icon::NOTIFICATION_GENERIC
+    )
+);
+
+$pusher = new Pusher()
+$pusher->pushToUser($userToken, $pin);
+```
