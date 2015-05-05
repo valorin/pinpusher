@@ -1,0 +1,15 @@
+{
+    "name": "valorin/pinpusher",
+    "description": "Pebble Timeline Pin generator and pusher.",
+    "type": "library",
+    "require": {
+        "guzzle/guzzle": "^3.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stephen Rees-Carter",
+            "email": "stephen@rees-carter.net"
+        }
+    ]
+}
