@@ -14,11 +14,6 @@ composer require valorin/pinpusher
 
 ## Features
 
-- actions
-    - title *(TODO)*
-    - type *(TODO)*
-        - openWatchApp
-    - launchCode *(TODO)*
 - Notifications (Icons) *(TODO)*
 - Create a Pin *(TODO)*
 - Update a Pin *(TODO)*

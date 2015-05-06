@@ -9,13 +9,13 @@ class OpenWatchApp extends Base
     protected $type = 'openWatchApp';
 
     /**
-     * @var string
+     * @var int
      */
     private $launchCode;
 
     /**
      * @param string $title
-     * @param string $launchCode
+     * @param int $launchCode
      */
     public function __construct($title, $launchCode)
     {
