@@ -1,9 +1,6 @@
 <?php
-
-
 namespace Valorin\PinPusher;
 
-
-interface GeneratorInterface {
-
+interface GeneratorInterface
+{
 }

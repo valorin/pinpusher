@@ -14,13 +14,6 @@ composer require valorin/pinpusher
 
 ## Features
 
-- Notifications (Icons) *(TODO)*
-- Create a Pin *(TODO)*
-- Update a Pin *(TODO)*
-- Delete a Pin *(TODO)*
-- Create a Shared Pin *(TODO)*
-- Delete a Shared Pin *(TODO)*
-- Listing Topic Subscriptions *(TODO)*
 - Error Handling *(TODO)*
 - Tests! *(TODO)*
 
@@ -38,6 +31,6 @@ $pin = new Pin(
     )
 );
 
-e$pusher = new Pusher()
-$pusher->pushToUser($userToken, $pin);
+$pusher = new Pusher()
+$pusher->pushToToken($userToken, $pin);
 ```

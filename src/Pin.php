@@ -23,7 +23,7 @@ class Pin
     protected $layout;
 
     /**
-     * @var int
+     * @var string
      */
     protected $id;
 
@@ -63,7 +63,7 @@ class Pin
     }
 
     /**
-     * @param int $id
+     * @param string $id
      * @return self
      */
     public function setId($id)
