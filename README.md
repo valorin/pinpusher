@@ -34,3 +34,11 @@ $pin = new Pin(
 $pusher = new Pusher()
 $pusher->pushToToken($userToken, $pin);
 ```
+
+
+
+```
+$pusher = new Pusher()
+$pusher->setLogger(new PsrCompatibleLogger);
+$pusher->pushToToken($userToken, $pin);
+```
