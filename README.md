@@ -16,11 +16,6 @@ composer require valorin/pinpusher
 
 ## Features
 
-- reminders
-    - time *(TODO)*
-    - layout *(TODO)*
-        - genericReminder *(TODO)*
-            - locationName
 - actions
     - title *(TODO)*
     - type *(TODO)*

@@ -10,7 +10,7 @@ class Notification
     use Generator;
 
     /**
-     * @var Base
+     * @var Generic
      */
     protected $layout;
 
@@ -20,7 +20,7 @@ class Notification
     protected $time;
 
     /**
-     * @param \Valorin\PinPusher\Pin\Notification\Generic $layout
+     * @param Generic $layout
      */
     public function __construct(Generic $layout)
     {
