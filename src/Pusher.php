@@ -49,6 +49,7 @@ class Pusher implements LoggerAwareInterface
     /**
      * @param string $token
      * @param Pin|string $pin
+     * @throws PebbleApiException
      */
     public function deleteFromUser($token, $pin)
     {
@@ -64,28 +65,52 @@ class Pusher implements LoggerAwareInterface
      * @param string $apiKey
      * @param array $topics
      * @param Pin   $pin
+     * @throws PebbleApiException
      */
     public function pushShared($apiKey, array $topics, Pin $pin)
     {
-        throw new \Exception('Not implemented yet!');
+        $url = self::API_SHARED_URL.$pin->getId();
+        $payload = $pin->generate();
+        $headers = [
+            self::API_SHARED_KEY => $apiKey,
+            self::API_SHARED_TOPICS => implode(',', $topics),
+        ];
+
+        $this->log("Pusher::pushShared => {$url}", ['payload' => $payload, 'headers' => $headers]);
+
+        $this->push($url, $payload, $headers);
     }
 
     /**
      * @param string $apiKey
      * @param Pin|string $pin
+     * @throws PebbleApiException
      */
     public function deleteShared($apiKey, $pin)
     {
-        throw new \Exception('Not implemented yet!');
+        $url = self::API_SHARED_URL.$pin->getId();
+        $headers = [
+            self::API_SHARED_KEY => $apiKey
+        ];
+
+        $this->log("Pusher::deleteShared => {$url}", ['headers' => $headers]);
+
+        $this->delete($url, $headers);
     }
 
     /**
      * @param $token
      * @return array
+     * @throws PebbleApiException
      */
     public function listTopics($token)
     {
-        throw new \Exception('Not implemented yet!');
+        $url = self::API_USER_SUBSCRIPTIONS;
+        $headers = [self::API_USER_HEADER => $token];
+
+        $this->log("Pusher::listTopics => {$url}", ['headers' => $headers]);
+
+        $this->get($url, $headers);
     }
 
     /**
@@ -124,6 +149,24 @@ class Pusher implements LoggerAwareInterface
         ];
 
         $this->request('delete', $url, $request);
+    }
+
+    /**
+     * @param string $url
+     * @param array  $headers
+     * @throws PebbleApiException
+     */
+    protected function get($url, array $headers)
+    {
+        $request = [
+            'headers' => array_merge(
+                ['Content-Type' => 'application/json'],
+                $headers
+            ),
+            'exceptions' => false,
+        ];
+
+        $this->request('get', $url, $request);
     }
 
     /**
