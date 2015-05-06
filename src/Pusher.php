@@ -2,7 +2,6 @@
 namespace Valorin\PinPusher;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
 
@@ -10,12 +9,12 @@ class Pusher implements LoggerAwareInterface
 {
     use LoggerAwareTrait;
 
-    const API_USER_URL = 'https://timeline-api.getpebble.com/v1/user/pins/';
-    const API_USER_HEADER = 'X-User-Token';
+    const API_USER_URL           = 'https://timeline-api.getpebble.com/v1/user/pins/';
+    const API_USER_HEADER        = 'X-User-Token';
     const API_USER_SUBSCRIPTIONS = 'https://timeline-api.getpebble.com/v1/user/subscriptions/';
 
-    const API_SHARED_URL = 'https://timeline-api.getpebble.com/v1/shared/pins/';
-    const API_SHARED_KEY = 'X-API-Key';
+    const API_SHARED_URL    = 'https://timeline-api.getpebble.com/v1/shared/pins/';
+    const API_SHARED_KEY    = 'X-API-Key';
     const API_SHARED_TOPICS = 'X-Pin-Topics';
 
     /**
@@ -33,11 +32,12 @@ class Pusher implements LoggerAwareInterface
     /**
      * @param string $token
      * @param Pin    $pin
+     *
      * @throws PebbleApiException
      */
     public function pushToUser($token, Pin $pin)
     {
-        $url = self::API_USER_URL.$pin->getId();
+        $url     = self::API_USER_URL.$pin->getId();
         $payload = $pin->generate();
         $headers = [self::API_USER_HEADER => $token];
 
@@ -47,13 +47,14 @@ class Pusher implements LoggerAwareInterface
     }
 
     /**
-     * @param string $token
+     * @param string     $token
      * @param Pin|string $pin
+     *
      * @throws PebbleApiException
      */
     public function deleteFromUser($token, $pin)
     {
-        $url = self::API_USER_URL.($pin instanceof Pin ? $pin->getId() : $pin);
+        $url     = self::API_USER_URL.($pin instanceof Pin ? $pin->getId() : $pin);
         $headers = [self::API_USER_HEADER => $token];
 
         $this->log("Pusher::deleteFromUser => {$url}", ['headers' => $headers]);
@@ -63,16 +64,17 @@ class Pusher implements LoggerAwareInterface
 
     /**
      * @param string $apiKey
-     * @param array $topics
-     * @param Pin   $pin
+     * @param array  $topics
+     * @param Pin    $pin
+     *
      * @throws PebbleApiException
      */
     public function pushShared($apiKey, array $topics, Pin $pin)
     {
-        $url = self::API_SHARED_URL.$pin->getId();
+        $url     = self::API_SHARED_URL.$pin->getId();
         $payload = $pin->generate();
         $headers = [
-            self::API_SHARED_KEY => $apiKey,
+            self::API_SHARED_KEY    => $apiKey,
             self::API_SHARED_TOPICS => implode(',', $topics),
         ];
 
@@ -82,15 +84,16 @@ class Pusher implements LoggerAwareInterface
     }
 
     /**
-     * @param string $apiKey
+     * @param string     $apiKey
      * @param Pin|string $pin
+     *
      * @throws PebbleApiException
      */
     public function deleteShared($apiKey, $pin)
     {
-        $url = self::API_SHARED_URL.$pin->getId();
+        $url     = self::API_SHARED_URL.$pin->getId();
         $headers = [
-            self::API_SHARED_KEY => $apiKey
+            self::API_SHARED_KEY => $apiKey,
         ];
 
         $this->log("Pusher::deleteShared => {$url}", ['headers' => $headers]);
@@ -100,12 +103,14 @@ class Pusher implements LoggerAwareInterface
 
     /**
      * @param $token
-     * @return array
+     *
      * @throws PebbleApiException
+     * @return array
+     *
      */
     public function listTopics($token)
     {
-        $url = self::API_USER_SUBSCRIPTIONS;
+        $url     = self::API_USER_SUBSCRIPTIONS;
         $headers = [self::API_USER_HEADER => $token];
 
         $this->log("Pusher::listTopics => {$url}", ['headers' => $headers]);
@@ -117,6 +122,7 @@ class Pusher implements LoggerAwareInterface
      * @param string $url
      * @param array  $payload
      * @param array  $headers
+     *
      * @throws PebbleApiException
      */
     protected function push($url, array $payload, array $headers)
@@ -126,7 +132,7 @@ class Pusher implements LoggerAwareInterface
                 ['Content-Type' => 'application/json'],
                 $headers
             ),
-            'json' => $payload,
+            'json'       => $payload,
             'exceptions' => false,
         ];
 
@@ -136,6 +142,7 @@ class Pusher implements LoggerAwareInterface
     /**
      * @param string $url
      * @param array  $headers
+     *
      * @throws PebbleApiException
      */
     protected function delete($url, array $headers)
@@ -154,6 +161,7 @@ class Pusher implements LoggerAwareInterface
     /**
      * @param string $url
      * @param array  $headers
+     *
      * @throws PebbleApiException
      */
     protected function get($url, array $headers)
@@ -173,6 +181,7 @@ class Pusher implements LoggerAwareInterface
      * @param $method
      * @param $url
      * @param $request
+     *
      * @throws PebbleApiException
      */
     protected function request($method, $url, $request)
@@ -181,7 +190,7 @@ class Pusher implements LoggerAwareInterface
 
         if ($response->getStatusCode() != 200) {
             $error = $this->parseError($response->getStatusCode());
-            $this->log('Error Received: ' . $error, [$response->json()]);
+            $this->log('Error Received: '.$error, [$response->json()]);
 
             throw new PebbleApiException($error);
         }
@@ -202,6 +211,7 @@ class Pusher implements LoggerAwareInterface
 
     /**
      * @param string $statusCode
+     *
      * @return string
      */
     protected function parseError($statusCode)

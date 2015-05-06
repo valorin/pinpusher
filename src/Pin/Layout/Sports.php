@@ -53,7 +53,6 @@ class Sports extends Generic
      */
     protected $sportsGameState;
 
-
     /**
      * @param string $title
      * @param string $tinyIcon
@@ -61,13 +60,14 @@ class Sports extends Generic
      */
     public function __construct($title, $tinyIcon, $largeIcon)
     {
-        $this->title = $title;
-        $this->tinyIcon = $tinyIcon;
+        $this->title     = $title;
+        $this->tinyIcon  = $tinyIcon;
         $this->largeIcon = $largeIcon;
     }
 
     /**
      * @param string $rankAway
+     *
      * @return self
      */
     public function setRankAway($rankAway)
@@ -79,6 +79,7 @@ class Sports extends Generic
 
     /**
      * @param string $rankHome
+     *
      * @return self
      */
     public function setRankHome($rankHome)
@@ -90,6 +91,7 @@ class Sports extends Generic
 
     /**
      * @param string $nameAway
+     *
      * @return self
      */
     public function setNameAway($nameAway)
@@ -101,6 +103,7 @@ class Sports extends Generic
 
     /**
      * @param string $nameHome
+     *
      * @return self
      */
     public function setNameHome($nameHome)
@@ -112,6 +115,7 @@ class Sports extends Generic
 
     /**
      * @param string $recordAway
+     *
      * @return self
      */
     public function setRecordAway($recordAway)
@@ -123,6 +127,7 @@ class Sports extends Generic
 
     /**
      * @param string $recordHome
+     *
      * @return self
      */
     public function setRecordHome($recordHome)
@@ -134,6 +139,7 @@ class Sports extends Generic
 
     /**
      * @param string $scoreAway
+     *
      * @return self
      */
     public function setScoreAway($scoreAway)
@@ -145,6 +151,7 @@ class Sports extends Generic
 
     /**
      * @param string $scoreHome
+     *
      * @return self
      */
     public function setScoreHome($scoreHome)
@@ -156,6 +163,7 @@ class Sports extends Generic
 
     /**
      * @param string $sportsGameState
+     *
      * @return self
      */
     public function setSportsGameState($sportsGameState)

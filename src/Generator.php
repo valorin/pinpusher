@@ -6,8 +6,9 @@ use DateTime;
 trait Generator
 {
     /**
-     * @return array
      * @throws UnknownParameterException
+     * @return array
+     *
      */
     public function generate()
     {
@@ -33,8 +34,10 @@ trait Generator
 
     /**
      * @param mixed $value
-     * @return mixed
+     *
      * @throws UnknownParameterException
+     * @return mixed
+     *
      */
     protected function generateValue($value)
     {

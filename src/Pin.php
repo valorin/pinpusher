@@ -54,19 +54,20 @@ class Pin
     protected $actions = [];
 
     /**
-     * @param string $id
+     * @param string   $id
      * @param DateTime $time
-     * @param Layout    $layout
+     * @param Layout   $layout
      */
     public function __construct($id, DateTime $time, Layout $layout)
     {
-        $this->time = $time;
+        $this->time   = $time;
         $this->layout = $layout;
-        $this->id = $id;
+        $this->id     = $id;
     }
 
     /**
      * @param int $duration
+     *
      * @return self
      */
     public function setDuration($duration)
@@ -78,6 +79,7 @@ class Pin
 
     /**
      * @param Notification $notification
+     *
      * @return self
      */
     public function setCreateNotification(Notification $notification)
@@ -89,6 +91,7 @@ class Pin
 
     /**
      * @param Notification $notification
+     *
      * @return self
      */
     public function setUpdateNotification(Notification $notification)
@@ -100,6 +103,7 @@ class Pin
 
     /**
      * @param array $reminders
+     *
      * @return self
      */
     public function setReminders($reminders)
@@ -111,6 +115,7 @@ class Pin
 
     /**
      * @param Reminder $reminder
+     *
      * @return self
      */
     public function addReminder(Reminder $reminder)
@@ -122,6 +127,7 @@ class Pin
 
     /**
      * @param array $actions
+     *
      * @return self
      */
     public function setActions($actions)
@@ -133,6 +139,7 @@ class Pin
 
     /**
      * @param Action $action
+     *
      * @return self
      */
     public function addAction(Action $action)

@@ -28,13 +28,14 @@ class Generic extends Base
      */
     public function __construct($time, $title, $tinyIcon)
     {
-        $this->title = $title;
+        $this->title    = $title;
         $this->tinyIcon = $tinyIcon;
-        $this->time = $time;
+        $this->time     = $time;
     }
 
     /**
      * @param string $locationName
+     *
      * @return self
      */
     public function setLocationName($locationName)
@@ -50,7 +51,7 @@ class Generic extends Base
     public function generate()
     {
         return [
-            'time' => $this->time->format(Pin::TIME_FORMAT),
+            'time'   => $this->time->format(Pin::TIME_FORMAT),
             'layout' => parent::generate(),
         ];
     }

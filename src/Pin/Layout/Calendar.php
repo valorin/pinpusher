@@ -18,12 +18,13 @@ class Calendar extends Generic
      */
     public function __construct($title)
     {
-        $this->type = self::TYPE;
+        $this->type  = self::TYPE;
         $this->title = $title;
     }
 
     /**
      * @param string $locationName
+     *
      * @return self
      */
     public function setLocationName($locationName)

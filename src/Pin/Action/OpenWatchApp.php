@@ -15,11 +15,11 @@ class OpenWatchApp extends Base
 
     /**
      * @param string $title
-     * @param int $launchCode
+     * @param int    $launchCode
      */
     public function __construct($title, $launchCode)
     {
-        $this->title = $title;
+        $this->title      = $title;
         $this->launchCode = $launchCode;
     }
 }

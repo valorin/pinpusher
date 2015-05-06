@@ -1,13 +1,7 @@
 <?php
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in('app/')
-    ->in('bootstrap/')
-    //->in('config/')
-    //->in('database/')
-    ->in('public/')
-    //->in('resources/lang/')
-    ->in('tests');
+    ->in('src/');
 
 return Symfony\CS\Config\Config::create()
     ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)

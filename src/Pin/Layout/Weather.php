@@ -21,14 +21,15 @@ class Weather extends Generic
      */
     public function __construct($title, $tinyIcon, $largeIcon, $locationName)
     {
-        $this->title = $title;
-        $this->tinyIcon = $tinyIcon;
-        $this->largeIcon = $largeIcon;
+        $this->title        = $title;
+        $this->tinyIcon     = $tinyIcon;
+        $this->largeIcon    = $largeIcon;
         $this->locationName = $locationName;
     }
 
     /**
      * @param string $locationName
+     *
      * @return self
      */
     public function setLocationName($locationName)

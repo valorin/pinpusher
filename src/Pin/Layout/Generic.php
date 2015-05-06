@@ -41,12 +41,13 @@ class Generic extends Base
      */
     public function __construct($title, $tinyIcon)
     {
-        $this->title = $title;
+        $this->title    = $title;
         $this->tinyIcon = $tinyIcon;
     }
 
     /**
      * @param string $foregroundColor
+     *
      * @return self
      */
     public function setForegroundColor($foregroundColor)
@@ -58,6 +59,7 @@ class Generic extends Base
 
     /**
      * @param string $backgroundColor
+     *
      * @return self
      */
     public function setBackgroundColor($backgroundColor)
@@ -69,6 +71,7 @@ class Generic extends Base
 
     /**
      * @param array $headings
+     *
      * @return self
      */
     public function setHeadings(array $headings)
@@ -80,6 +83,7 @@ class Generic extends Base
 
     /**
      * @param array $paragraphs
+     *
      * @return self
      */
     public function setParagraphs(array $paragraphs)
@@ -91,6 +95,7 @@ class Generic extends Base
 
     /**
      * @param DateTime $lastUpdated
+     *
      * @return self
      */
     public function setLastUpdated(DateTime $lastUpdated)

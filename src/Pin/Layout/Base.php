@@ -50,6 +50,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $title
+     *
      * @return self
      */
     public function setTitle($title)
@@ -61,6 +62,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $shortTitle
+     *
      * @return self
      */
     public function setShortTitle($shortTitle)
@@ -72,6 +74,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $subtitle
+     *
      * @return self
      */
     public function setSubtitle($subtitle)
@@ -83,6 +86,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $body
+     *
      * @return self
      */
     public function setBody($body)
@@ -94,6 +98,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $tinyIcon
+     *
      * @return self
      */
     public function setTinyIcon($tinyIcon)
@@ -105,6 +110,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $smallIcon
+     *
      * @return self
      */
     public function setSmallIcon($smallIcon)
@@ -116,6 +122,7 @@ abstract class Base implements GeneratorInterface
 
     /**
      * @param string $largeIcon
+     *
      * @return self
      */
     public function setLargeIcon($largeIcon)

@@ -23,7 +23,7 @@ class Generic extends Base
      */
     public function __construct($title, $tinyIcon)
     {
-        $this->title = $title;
+        $this->title    = $title;
         $this->tinyIcon = $tinyIcon;
     }
 
@@ -37,6 +37,7 @@ class Generic extends Base
 
     /**
      * @param DateTime $time
+     *
      * @return self
      */
     public function setTime($time)
@@ -52,7 +53,7 @@ class Generic extends Base
     public function generate()
     {
         return [
-            'time' => $this->time->format(Pin::TIME_FORMAT),
+            'time'   => $this->time->format(Pin::TIME_FORMAT),
             'layout' => parent::generate(),
         ];
     }
