@@ -16,17 +16,17 @@ composer require valorin/pinpusher
 
 ## Features
 
-- id *(TODO)*
-- time *(TODO)*
-- duration *(TODO)*
-- createNotification *(TODO)*
+- id
+- time
+- duration
+- createNotification
     - layout *(TODO)*
         - genericNotification *(TODO)*
         - commNotification *(TODO)*
-- updateNotification *(TODO)*
+- updateNotification
     - time *(TODO)*
     - layout *(TODO)*
-- layout *(TODO)*
+- layout
     - type *(TODO)*
         - genericPin *(TODO)*
         - calendarPin *(TODO)*
@@ -47,20 +47,20 @@ composer require valorin/pinpusher
     - shortTitle *(TODO)*
     - subtitle *(TODO)*
     - body *(TODO)*
-    - tinyIcon *(TODO)*
-    - smallIcon *(TODO)*
-    - largeIcon *(TODO)*
+    - tinyIcon
+    - smallIcon
+    - largeIcon
     - foregroundColor *(TODO)*
     - backgroundColor *(TODO)*
     - headings *(TODO)*
     - paragraphs *(TODO)*
     - lastUpdated *(TODO)*
-- reminders *(TODO)*
+- reminders
     - time *(TODO)*
     - layout *(TODO)*
         - genericReminder *(TODO)*
             - locationName
-- actions *(TODO)*
+- actions
     - title *(TODO)*
     - type *(TODO)*
         - openWatchApp
@@ -73,6 +73,7 @@ composer require valorin/pinpusher
 - Delete a Shared Pin *(TODO)*
 - Listing Topic Subscriptions *(TODO)*
 - Error Handling *(TODO)*
+- Tests! *(TODO)*
 
 ## Usage
 
@@ -88,6 +89,6 @@ $pin = new Pin(
     )
 );
 
-$pusher = new Pusher()
+e$pusher = new Pusher()
 $pusher->pushToUser($userToken, $pin);
 ```
