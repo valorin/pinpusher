@@ -37,9 +37,4 @@ class Notification
 
         return $this;
     }
-
-    protected function fields()
-    {
-        return ['layout', 'time'];
-    }
 }

@@ -35,14 +35,4 @@ class Generic extends Base
 
         return $this;
     }
-
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
-        return array_merge(parent::fields(), [
-            'locationName',
-        ]);
-    }
 }

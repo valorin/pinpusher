@@ -37,9 +37,4 @@ class Reminder
 
         return $this;
     }
-
-    protected function fields()
-    {
-        return ['layout', 'time'];
-    }
 }

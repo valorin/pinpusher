@@ -164,22 +164,4 @@ class Sports extends Generic
 
         return $this;
     }
-
-    /**
-     * @return array
-     */
-    protected function fields()
-    {
-        return array_merge(parent::fields(), [
-            'rankAway',
-            'rankHome',
-            'nameAway',
-            'nameHome',
-            'recordAway',
-            'recordHome',
-            'scoreAway',
-            'scoreHome',
-            'sportsGameState',
-        ]);
-    }
 }

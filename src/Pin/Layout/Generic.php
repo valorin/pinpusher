@@ -99,15 +99,4 @@ class Generic extends Base
 
         return $this;
     }
-
-    protected function fields()
-    {
-        return array_merge(parent::fields(), [
-            'foregroundColor',
-            'backgroundColor',
-            'headings',
-            'paragraphs',
-            'lastUpdated',
-        ]);
-    }
 }

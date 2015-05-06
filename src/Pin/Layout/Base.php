@@ -123,17 +123,4 @@ abstract class Base
 
         return $this;
     }
-
-    /**
-     * @return array
-     * @throws TypeRequiredException
-     */
-    protected function fields()
-    {
-        if (empty($this->type)) {
-            throw new TypeRequiredException(__CLASS__);
-        }
-
-        return ['type', 'title', 'shortTitle', 'subtitle', 'body', 'tinyIcon', 'smallIcon', 'largeIcon'];
-    }
 }

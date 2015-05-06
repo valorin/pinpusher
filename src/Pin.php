@@ -1,8 +1,8 @@
 <?php
 namespace Valorin\PinPusher;
 
-use Valorin\PinPusher\Pin\Action;
-use Valorin\PinPusher\Pin\Layout\Base;
+use Valorin\PinPusher\Pin\Action\Base as Action;
+use Valorin\PinPusher\Pin\Layout\Base as Layout;
 use Valorin\PinPusher\Pin\Notification;
 use Valorin\PinPusher\Pin\Reminder;
 
@@ -18,7 +18,7 @@ class Pin
     protected $time;
 
     /**
-     * @var Base
+     * @var Layout
      */
     protected $layout;
 
@@ -54,9 +54,9 @@ class Pin
 
     /**
      * @param \DateTime $time
-     * @param Base    $layout
+     * @param Layout    $layout
      */
-    public function __construct(\DateTime $time, Base $layout)
+    public function __construct(\DateTime $time, Layout $layout)
     {
         $this->time = $time;
         $this->layout = $layout;
@@ -148,19 +148,5 @@ class Pin
         $this->actions[] = $action;
 
         return $this;
-    }
-
-    protected function fields()
-    {
-        return [
-            'time',
-            'layout',
-            'id',
-            'duration',
-            'createNotification',
-            'updateNotification',
-            'reminders',
-            'actions'
-        ];
     }
 }

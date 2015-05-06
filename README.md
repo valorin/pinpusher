@@ -1,7 +1,5 @@
 # PinPusher
 
-**Important: PinPusher is still in early development and is currently feature limited.**
-
 Simple Pebble Timeline Pin generator and pusher API wraper for PHP.
 
 See the [official Pebble Timeline documentation](http://developer.getpebble.com/guides/timeline/) for more information.
