@@ -1,9 +1,10 @@
 {
     "name": "valorin/pinpusher",
-    "description": "Simple Pebble Timeline Pin generator and pusher API wraper for PHP.",
+    "description": "Simple Pebble Timeline Pin API wrapper, with complete supporting for all of the Pebble Timeline API options.",
     "type": "library",
     "require": {
-        "psr/log": "^1.0"
+        "psr/log": "^1.0",
+        "guzzlehttp/guzzle": "^5.2"
     },
     "license": "MIT",
     "authors": [
