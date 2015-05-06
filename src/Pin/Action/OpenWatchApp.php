@@ -11,7 +11,7 @@ class OpenWatchApp extends Base
     /**
      * @var int
      */
-    private $launchCode;
+    protected $launchCode;
 
     /**
      * @param string $title
