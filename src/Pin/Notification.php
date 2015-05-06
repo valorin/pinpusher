@@ -3,7 +3,7 @@ namespace Valorin\PinPusher\Pin;
 
 use DateTime;
 use Valorin\PinPusher\Generator;
-use Valorin\PinPusher\Pin\Layout\Base;
+use Valorin\PinPusher\Pin\Notification\Generic;
 
 class Notification
 {
@@ -20,9 +20,9 @@ class Notification
     protected $time;
 
     /**
-     * @param Base $layout
+     * @param \Valorin\PinPusher\Pin\Notification\Generic $layout
      */
-    public function __construct(Base $layout)
+    public function __construct(Generic $layout)
     {
         $this->layout = $layout;
     }

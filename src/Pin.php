@@ -99,7 +99,7 @@ class Pin
      * @param Notification $notification
      * @return self
      */
-    public function setUpdateNotification($notification)
+    public function setUpdateNotification(Notification $notification)
     {
         $this->updateNotification = $notification;
 
