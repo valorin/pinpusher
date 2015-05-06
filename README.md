@@ -83,7 +83,7 @@ use Valorin\PinPusher\Pin;
 
 $pin = new Pin(
     new DateTime('2015-05-05 15:00:00'),
-    new Pin\GenericLayout(
+    new Pin\Layout\Generic(
         'This is a generic pin.',
         Pin\Icon::NOTIFICATION_GENERIC
     )

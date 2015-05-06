@@ -13,7 +13,7 @@ trait Generator
     {
         $output = [];
 
-        foreach ($this->fields as $field) {
+        foreach ($this->fields() as $field) {
             $output[$field] = $this->generateValue($this->$field);
         }
 

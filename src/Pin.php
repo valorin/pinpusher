@@ -2,7 +2,7 @@
 namespace Valorin\PinPusher;
 
 use Valorin\PinPusher\Pin\Action;
-use Valorin\PinPusher\Pin\Layout;
+use Valorin\PinPusher\Pin\Layout\Base;
 use Valorin\PinPusher\Pin\Notification;
 use Valorin\PinPusher\Pin\Reminder;
 
@@ -18,7 +18,7 @@ class Pin
     protected $time;
 
     /**
-     * @var Layout
+     * @var Base
      */
     protected $layout;
 
@@ -53,24 +53,10 @@ class Pin
     protected $actions = [];
 
     /**
-     * @var array
-     */
-    protected $fields = [
-        'time',
-        'layout',
-        'id',
-        'duration',
-        'createNotification',
-        'updateNotification',
-        'reminders',
-        'actions'
-    ];
-
-    /**
      * @param \DateTime $time
-     * @param Layout    $layout
+     * @param Base    $layout
      */
-    public function __construct(\DateTime $time, Layout $layout)
+    public function __construct(\DateTime $time, Base $layout)
     {
         $this->time = $time;
         $this->layout = $layout;
@@ -162,5 +148,19 @@ class Pin
         $this->actions[] = $action;
 
         return $this;
+    }
+
+    protected function fields()
+    {
+        return [
+            'time',
+            'layout',
+            'id',
+            'duration',
+            'createNotification',
+            'updateNotification',
+            'reminders',
+            'actions'
+        ];
     }
 }
