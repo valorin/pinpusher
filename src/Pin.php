@@ -1,6 +1,7 @@
 <?php
 namespace Valorin\PinPusher;
 
+use DateTime;
 use Valorin\PinPusher\Pin\Action\Base as Action;
 use Valorin\PinPusher\Pin\Layout\Base as Layout;
 use Valorin\PinPusher\Pin\Notification\Generic as Notification;
@@ -13,7 +14,7 @@ class Pin
     const TIME_FORMAT = 'Y-m-d\TH:i:s\Z';
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $time;
 
@@ -53,24 +54,15 @@ class Pin
     protected $actions = [];
 
     /**
-     * @param \DateTime $time
+     * @param string $id
+     * @param DateTime $time
      * @param Layout    $layout
      */
-    public function __construct(\DateTime $time, Layout $layout)
+    public function __construct($id, DateTime $time, Layout $layout)
     {
         $this->time = $time;
         $this->layout = $layout;
-    }
-
-    /**
-     * @param string $id
-     * @return self
-     */
-    public function setId($id)
-    {
         $this->id = $id;
-
-        return $this;
     }
 
     /**
@@ -151,7 +143,7 @@ class Pin
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getTime()
     {
