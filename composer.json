@@ -1,6 +1,6 @@
 {
     "name": "valorin/pinpusher",
-    "description": "Simple Pebble Timeline Pin API wrapper, with complete supporting for all of the Pebble Timeline API options.",
+    "description": "Simple Pebble Timeline Pin API wrapper, with full support for all of the Pebble Timeline API options.",
     "type": "library",
     "require": {
         "psr/log": "^1.0",
