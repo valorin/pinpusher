@@ -37,25 +37,13 @@ class Pusher implements LoggerAwareInterface
      */
     public function pushToUser($token, Pin $pin)
     {
-        $url     = self::API_USER_URL.$pin->getId();
-        $request = [
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'X-User-Token' => $token,
-            ],
-            'json' => $pin->generate(),
-            'exceptions' => false,
-        ];
+        $url = self::API_USER_URL.$pin->getId();
+        $payload = $pin->generate();
+        $headers = [self::API_USER_HEADER => $token];
 
-        $this->log("Pusher::pushToUser => {$url}", $request);
+        $this->log("Pusher::pushToUser => {$url}", ['payload' => $payload, 'headers' => $headers]);
 
-        $response = (new Client)->put($url, $request);
-
-        if ($response->getStatusCode() != 200) {
-            $error = $this->parseError($response->getStatusCode());
-            $this->log('Error Received: '.$error, [(string)$response->getBody()]);
-            throw new PebbleApiException($error);
-        }
+        $this->push($url, $payload, $headers);
     }
 
     /**
@@ -64,7 +52,12 @@ class Pusher implements LoggerAwareInterface
      */
     public function deleteFromUser($token, $pin)
     {
-        throw new \Exception('Not implemented yet!');
+        $url = self::API_USER_URL.($pin instanceof Pin ? $pin->getId() : $pin);
+        $headers = [self::API_USER_HEADER => $token];
+
+        $this->log("Pusher::deleteFromUser => {$url}", ['headers' => $headers]);
+
+        $this->delete($url, $headers);
     }
 
     /**
@@ -93,6 +86,62 @@ class Pusher implements LoggerAwareInterface
     public function listTopics($token)
     {
         throw new \Exception('Not implemented yet!');
+    }
+
+    /**
+     * @param string $url
+     * @param array  $payload
+     * @param array  $headers
+     * @throws PebbleApiException
+     */
+    protected function push($url, array $payload, array $headers)
+    {
+        $request = [
+            'headers' => array_merge(
+                ['Content-Type' => 'application/json'],
+                $headers
+            ),
+            'json' => $payload,
+            'exceptions' => false,
+        ];
+
+        $this->request('put', $url, $request);
+    }
+
+    /**
+     * @param string $url
+     * @param array  $headers
+     * @throws PebbleApiException
+     */
+    protected function delete($url, array $headers)
+    {
+        $request = [
+            'headers' => array_merge(
+                ['Content-Type' => 'application/json'],
+                $headers
+            ),
+            'exceptions' => false,
+        ];
+
+        $this->request('delete', $url, $request);
+    }
+
+    /**
+     * @param $method
+     * @param $url
+     * @param $request
+     * @throws PebbleApiException
+     */
+    protected function request($method, $url, $request)
+    {
+        $response = (new Client)->$method($url, $request);
+
+        if ($response->getStatusCode() != 200) {
+            $error = $this->parseError($response->getStatusCode());
+            $this->log('Error Received: ' . $error, [$response->json()]);
+
+            throw new PebbleApiException($error);
+        }
     }
 
     /**
