@@ -1,6 +1,8 @@
 <?php
 namespace Valorin\PinPusher\Pin\Notification;
 
+use DateTime;
+use Valorin\PinPusher\Pin;
 use Valorin\PinPusher\Pin\Layout\Base;
 
 class Generic extends Base
@@ -11,6 +13,11 @@ class Generic extends Base
     protected $type = 'genericNotification';
 
     /**
+     * @var DateTime
+     */
+    protected $time;
+
+    /**
      * @param $title
      * @param $tinyIcon
      */
@@ -18,5 +25,35 @@ class Generic extends Base
     {
         $this->title = $title;
         $this->tinyIcon = $tinyIcon;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * @param DateTime $time
+     * @return self
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function generate()
+    {
+        return [
+            'time' => $this->time->format(Pin::TIME_FORMAT),
+            'layout' => parent::generate(),
+        ];
     }
 }

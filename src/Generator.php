@@ -13,8 +13,12 @@ trait Generator
     {
         $output = [];
 
-        foreach (get_object_vars($this) as $field) {
-            $output[$field] = $this->generateValue($this->$field);
+        $fields = array_keys(get_object_vars($this));
+
+        foreach ($fields as $field) {
+            if ($value = $this->generateValue($this->$field)) {
+                $output[$field] = $value;
+            }
         }
 
         return $output;
@@ -24,7 +28,7 @@ trait Generator
     {
         return array_map(function ($value) {
             return $this->generateValue($value);
-        }, $values);
+        }, array_filter($values));
     }
 
     /**

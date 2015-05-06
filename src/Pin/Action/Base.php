@@ -2,8 +2,9 @@
 namespace Valorin\PinPusher\Pin\Action;
 
 use Valorin\PinPusher\Generator;
+use Valorin\PinPusher\GeneratorInterface;
 
-abstract class Base
+abstract class Base implements GeneratorInterface
 {
     use Generator;
 

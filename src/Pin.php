@@ -3,8 +3,8 @@ namespace Valorin\PinPusher;
 
 use Valorin\PinPusher\Pin\Action\Base as Action;
 use Valorin\PinPusher\Pin\Layout\Base as Layout;
-use Valorin\PinPusher\Pin\Notification;
-use Valorin\PinPusher\Pin\Reminder;
+use Valorin\PinPusher\Pin\Notification\Generic as Notification;
+use Valorin\PinPusher\Pin\Reminder\Generic as Reminder;
 
 class Pin
 {
@@ -148,5 +148,69 @@ class Pin
         $this->actions[] = $action;
 
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * @return Layout
+     */
+    public function getLayout()
+    {
+        return $this->layout;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * @return Notification
+     */
+    public function getCreateNotification()
+    {
+        return $this->createNotification;
+    }
+
+    /**
+     * @return Notification
+     */
+    public function getUpdateNotification()
+    {
+        return $this->updateNotification;
+    }
+
+    /**
+     * @return array
+     */
+    public function getReminders()
+    {
+        return $this->reminders;
+    }
+
+    /**
+     * @return array
+     */
+    public function getActions()
+    {
+        return $this->actions;
     }
 }

@@ -1,6 +1,8 @@
 <?php
 namespace Valorin\PinPusher;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
 
@@ -20,20 +22,40 @@ class Pusher implements LoggerAwareInterface
      * @var array
      */
     protected $errors = [
-        '400' => ['INVALID_JSON' => 'The pin object submitted was invalid.'],
-        '403' => ['INVALID_API_KEY' => 'The API key submitted was invalid.'],
-        '410' => ['INVALID_USER_TOKEN' => 'The user token submitted was invalid or does not exist.'],
-        '429' => ['RATE_LIMIT_EXCEEDED' => 'Server is sending updates too quickly.'],
-        '503' => ['SERVICE_UNAVAILABLE' => 'Could not save pin due to a temporary server error.'],
+        '400' => 'INVALID_JSON - The pin object submitted was invalid.',
+        '403' => 'INVALID_API_KEY - The API key submitted was invalid.',
+        '410' => 'INVALID_USER_TOKEN - The user token submitted was invalid or does not exist.',
+        '429' => 'RATE_LIMIT_EXCEEDED - Server is sending updates too quickly.',
+        '503' => 'SERVICE_UNAVAILABLE - Could not save pin due to a temporary server error.',
+        'x'   => 'UNKNOWN ERROR OCCURRED!',
     ];
 
     /**
      * @param string $token
-     * @param Pin $pin
+     * @param Pin    $pin
+     * @throws PebbleApiException
      */
     public function pushToUser($token, Pin $pin)
     {
-        throw new \Exception('Not implemented yet!');
+        $url     = self::API_USER_URL.$pin->getId();
+        $request = [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'X-User-Token' => $token,
+            ],
+            'json' => $pin->generate(),
+            'exceptions' => false,
+        ];
+
+        $this->log("Pusher::pushToUser => {$url}", $request);
+
+        $response = (new Client)->put($url, $request);
+
+        if ($response->getStatusCode() != 200) {
+            $error = $this->parseError($response->getStatusCode());
+            $this->log('Error Received: '.$error, [(string)$response->getBody()]);
+            throw new PebbleApiException($error);
+        }
     }
 
     /**
@@ -84,5 +106,14 @@ class Pusher implements LoggerAwareInterface
         }
 
         $this->logger->debug($message, $context);
+    }
+
+    /**
+     * @param string $statusCode
+     * @return string
+     */
+    protected function parseError($statusCode)
+    {
+        return isset($this->errors[$statusCode]) ? $this->errors[$statusCode] : $this->errors['x'];
     }
 }
