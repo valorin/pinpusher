@@ -1,12 +1,12 @@
 <?php
 namespace Valorin\PinPusher\Pin\Layout;
 
-class Calendar extends Generic
+class Weather extends Generic
 {
     /**
      * @var string
      */
-    protected $type = 'calendarPin';
+    protected $type = 'weatherPin';
 
     /**
      * @var string
@@ -15,22 +15,16 @@ class Calendar extends Generic
 
     /**
      * @param string $title
-     */
-    public function __construct($title)
-    {
-        $this->type = self::TYPE;
-        $this->title = $title;
-    }
-
-    /**
+     * @param string $tinyIcon
+     * @param string $largeIcon
      * @param string $locationName
-     * @return self
      */
-    public function setLocationName($locationName)
+    public function __construct($title, $tinyIcon, $largeIcon, $locationName)
     {
+        $this->title = $title;
+        $this->tinyIcon = $tinyIcon;
+        $this->largeIcon = $largeIcon;
         $this->locationName = $locationName;
-
-        return $this;
     }
 
     /**
