@@ -52,8 +52,14 @@ class Generic extends Base
      */
     public function generate()
     {
+        if ($this->time) {
+            return [
+                'time'   => $this->time->format(Pin::TIME_FORMAT),
+                'layout' => parent::generate(),
+            ];
+        }
+
         return [
-            'time'   => $this->time->format(Pin::TIME_FORMAT),
             'layout' => parent::generate(),
         ];
     }

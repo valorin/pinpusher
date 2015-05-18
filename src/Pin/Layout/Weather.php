@@ -26,16 +26,4 @@ class Weather extends Generic
         $this->largeIcon    = $largeIcon;
         $this->locationName = $locationName;
     }
-
-    /**
-     * @param string $locationName
-     *
-     * @return self
-     */
-    public function setLocationName($locationName)
-    {
-        $this->locationName = $locationName;
-
-        return $this;
-    }
 }

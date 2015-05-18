@@ -3,6 +3,9 @@ namespace Valorin\PinPusher\Pin\Layout;
 
 class Sports extends Generic
 {
+    const INGAME = 'in-game';
+    const PREGAME = 'pre-game';
+
     /**
      * @var string
      */
