@@ -28,7 +28,7 @@ trait Generator
     {
         return array_map(function ($value) {
             return $this->generateValue($value);
-        }, array_filter($values, 'strlen'));
+        }, array_filter($values));
     }
 
     /**
