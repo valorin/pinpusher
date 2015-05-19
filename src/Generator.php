@@ -17,11 +17,10 @@ trait Generator
         $fields = array_keys(get_object_vars($this));
 
         foreach ($fields as $field) {
-            if ($value = $this->generateValue($this->$field)) {
+            if (($value = $this->generateValue($this->$field)) !== null) {
                 $output[$field] = $value;
             }
         }
-
         return $output;
     }
 
@@ -29,7 +28,7 @@ trait Generator
     {
         return array_map(function ($value) {
             return $this->generateValue($value);
-        }, array_filter($values));
+        }, array_filter($values, 'strlen'));
     }
 
     /**

@@ -75,7 +75,7 @@ class Sports extends Generic
      */
     public function setRankAway($rankAway)
     {
-        $this->rankAway = $rankAway;
+        $this->rankAway = (string) $rankAway;
 
         return $this;
     }
@@ -87,7 +87,7 @@ class Sports extends Generic
      */
     public function setRankHome($rankHome)
     {
-        $this->rankHome = $rankHome;
+        $this->rankHome = (string) $rankHome;
 
         return $this;
     }
@@ -123,7 +123,7 @@ class Sports extends Generic
      */
     public function setRecordAway($recordAway)
     {
-        $this->recordAway = $recordAway;
+        $this->recordAway = (string) $recordAway;
 
         return $this;
     }
@@ -135,7 +135,7 @@ class Sports extends Generic
      */
     public function setRecordHome($recordHome)
     {
-        $this->recordHome = $recordHome;
+        $this->recordHome = (string) $recordHome;
 
         return $this;
     }
@@ -147,7 +147,7 @@ class Sports extends Generic
      */
     public function setScoreAway($scoreAway)
     {
-        $this->scoreAway = $scoreAway;
+        $this->scoreAway = (string) $scoreAway;
 
         return $this;
     }
@@ -159,7 +159,7 @@ class Sports extends Generic
      */
     public function setScoreHome($scoreHome)
     {
-        $this->scoreHome = $scoreHome;
+        $this->scoreHome = (string) $scoreHome;
 
         return $this;
     }
