@@ -18,6 +18,11 @@ class Generic extends Base
     protected $time;
 
     /**
+     * @var string
+     */
+    protected $backgroundColor;
+
+    /**
      * @param $title
      * @param $tinyIcon
      */
@@ -43,6 +48,17 @@ class Generic extends Base
     public function setTime($time)
     {
         $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * @param string $backgroundColor
+     * @return self
+     */
+    public function setBackgroundColor($backgroundColor)
+    {
+        $this->backgroundColor = $backgroundColor;
 
         return $this;
     }
