@@ -53,7 +53,7 @@ $pusher = new Pusher()
 $pusher->pushToUser($userToken, $pin);
 ```
 
-**Complete Pin Example***
+**Complete Pin Example**
 
 ```
 {
@@ -169,7 +169,7 @@ $pusher->setLogger($psrCompatibleLogger);
 $pusher->pushToUser($userToken, $pin);
 ```
 
-**A more complete example**
+**Another Example**
 
 ```
 use Valorin\PinPusher\Pusher;
