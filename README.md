@@ -44,7 +44,7 @@ $pin = new Pin(
     'example-pin-generic-1',
     new DateTime('2015-03-19T18:00:00Z'),
     new Pin\Layout\Generic(
-        'TNews at 6 o'clock',
+        "News at 6 o'clock",
         Pin\Icon::NOTIFICATION_FLAG
     )
 );
