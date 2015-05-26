@@ -176,7 +176,7 @@ use Valorin\PinPusher\Pusher;
 use Valorin\PinPusher\Pin;
 
 $layout = new Pin\Layout\Generic('This is a title', Pin\Icon::NOTIFICATION_REMINDER);
-$layout->setBackgroundColor('PictonBlue')
+$layout->setBackgroundColor(Pin\Color::PICTON_BLUE)
        ->setSubtitle('This is a subtitle')
        ->setBody('This is the body of the main layout...');
 
