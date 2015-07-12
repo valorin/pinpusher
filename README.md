@@ -14,10 +14,6 @@ PinPusher can be installed with [composer](https://getcomposer.org/):
 composer require valorin/pinpusher
 ```
 
-## Class Reference
-
-
-
 ## Examples
 
 XHere are a couple of usage examples, based on the examples in the [Pebble Timeline documentation](http://developer.getpebble.com/guides/timeline/pin-structure/).
@@ -156,7 +152,7 @@ $pin->setDuration(60)
     ->setUpdateNotification($updateNotification)
     ->setReminders($reminders)
     ->setActions($actions);
-    
+
 $pusher = new Pusher()
 $pusher->pushToUser($userToken, $pin);
 ```
