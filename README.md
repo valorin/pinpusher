@@ -2,7 +2,7 @@
 
 Simple Pebble Timeline Pin API wrapper, with full support for all of the Pebble Timeline API options.
 
-*Currently supports SDK 3.0-beta10.*
+*Currently supports SDK 3.1*
 
 See the [official Pebble Timeline documentation](http://developer.getpebble.com/guides/timeline/) for more information.
 
