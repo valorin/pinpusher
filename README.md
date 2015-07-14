@@ -1,6 +1,6 @@
 # PinPusher
 
-Simple Pebble Timeline Pin API wrapper, with full support for all of the Pebble Timeline API options.
+Simple Pebble Timeline Pin API wrapper for PHP, with full support for all of the Pebble Timeline API options.
 
 *Currently supports SDK 3.1*
 
