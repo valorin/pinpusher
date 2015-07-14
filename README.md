@@ -18,7 +18,7 @@ composer require valorin/pinpusher
 
 ## Examples
 
-XHere are a couple of usage examples, based on the examples in the [Pebble Timeline documentation](http://developer.getpebble.com/guides/timeline/pin-structure/).
+Here are a couple of usage examples, based on the examples in the [Pebble Timeline documentation](http://developer.getpebble.com/guides/timeline/pin-structure/).
 
 **Minimal Pin Example**
 
