@@ -1,6 +1,8 @@
 # PinPusher
 
-Simple Pebble Timeline Pin API wrapper for PHP, with full support for all of the Pebble Timeline API options.
+PinPusher is a simple Pebble Timeline Pin API wrapper for PHP, with full support for all of the Pebble Timeline API options. It is designed to be easy to use, and allow you to completely construct Timeline pins using PHP classes. This is beneficial to those with bad memories and/or IDEs that autocomplete. It also covers each individual layout case with the different requirements, so you don't need to guess what works where.
+
+PinPusher is easily installable via Composer (or manually) and is framework independent. It also supports a PSR-3 compatible logger, if you need logging support. (Which is very helpful for debugging responses from the timeline API.)
 
 *Currently supports SDK 3.1*
 
