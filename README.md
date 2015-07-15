@@ -16,6 +16,10 @@ PinPusher can be installed with [composer](https://getcomposer.org/):
 composer require valorin/pinpusher
 ```
 
+## Support
+
+You can find me as `valorin` in the [PebbleDev Slack channel](http://slack.pbldev.io/), or email me directly (it's in `composer.json`).
+
 ## Examples
 
 Here are a couple of usage examples, based on the examples in the [Pebble Timeline documentation](http://developer.getpebble.com/guides/timeline/pin-structure/).
