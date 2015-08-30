@@ -67,4 +67,82 @@ class Color
     const IMPERIAL_PURPLE = '#550055';
     const BRASS = '#AAAA55';
     const MEDIUM_SPRING_GREEN = '#00FFAA';
+
+    public static $colors = [
+        '#AAFFAA',
+        '#FFAAAA',
+        '#FF55FF',
+        '#FF0055',
+        '#FF5555',
+        '#555500',
+        '#0000AA',
+        '#00AAAA',
+        '#55FF55',
+        '#FFFFAA',
+        '#FFAAFF',
+        '#55FF00',
+        '#FF55AA',
+        '#55AAAA',
+        '#AA5555',
+        '#FF00AA',
+        '#00AA55',
+        '#AAAAFF',
+        '#AA55AA',
+        '#FFAA00',
+        '#005500',
+        '#FF0000',
+        '#5555AA',
+        '#AAAAAA',
+        '#AA00FF',
+        '#FFAA55',
+        '#5500AA',
+        '#55AA55',
+        '#FFFF55',
+        '#550000',
+        '#FF5500',
+        '#00FF00',
+        '#AA5500',
+        '#AA55FF',
+        '#555555',
+        '#55FFFF',
+        '#0055FF',
+        '#00FFFF',
+        '#000000',
+        '#55FFAA',
+        '#AA0000',
+        '#AAAA00',
+        '#0055AA',
+        '#AAFFFF',
+        '#5500FF',
+        '#55AAFF',
+        '#AAFF55',
+        '#0000FF',
+        '#00AAFF',
+        '#AA00AA',
+        '#55AA00',
+        '#00FF55',
+        '#005555',
+        '#FFFF00',
+        '#FF00FF',
+        '#AAFF00',
+        '#AA0055',
+        '#5555FF',
+        '#FFFFFF',
+        '#00AA00',
+        '#000055',
+        '#550055',
+        '#AAAA55',
+        '#00FFAA',
+    ];
+
+    /**
+     * Returns true if the specified color is a valid pebble color.
+     *
+     * @param string $color
+     * @return bool
+     */
+    public static function isValid($color)
+    {
+        return in_array($color, self::$colors);
+    }
 }
