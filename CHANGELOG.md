@@ -20,4 +20,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 [unreleased]: https://github.com/valorin/pinpusher/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/valorin/pinpusher/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/valorin/pinpusher/compare/v0.0.6...v0.0.7
+[1.0.0]: https://github.com/valorin/pinpusher/compare/6a9c7db...v1.0.0
