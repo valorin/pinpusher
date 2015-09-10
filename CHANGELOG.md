@@ -1,0 +1,23 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+## [Unreleased][unreleased]
+### Added
+- Added support for [HTTP Actions](https://developer.getpebble.com/guides/timeline/pin-structure/#http-actions).
+
+### Removed
+- Removed redundant `TypeRequiredException` exception.
+
+## [1.0.1] - 2015-08-30
+### Added
+- Added `Color::isValid()` helper for validating HEX colour codes are valid Pebble colours.
+
+## [1.0.0] - 2015-08-30
+### Initial release
+- Initial proper release of PinPusher.
+- Fully support all options of the Timeline API.
+
+[unreleased]: https://github.com/valorin/pinpusher/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/valorin/pinpusher/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/valorin/pinpusher/compare/v0.0.6...v0.0.7
