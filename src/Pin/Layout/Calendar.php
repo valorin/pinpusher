@@ -29,7 +29,7 @@ class Calendar extends Generic
      */
     public function setLocationName($locationName)
     {
-        $this->locationName = $locationName;
+        $this->locationName = str_limit($locationName, 256);
 
         return $this;
     }

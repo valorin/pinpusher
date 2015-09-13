@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Added
 - Added `PebbleApiException::getResponse()` to retrieve the original raw API response when a pin push attempt fails.
 
+## Updated
+- Limiting locationName field to 256 characters.
+
 ## [1.1.0] - 2015-09-10
 ### Added
 - Added support for [HTTP Actions](https://developer.getpebble.com/guides/timeline/pin-structure/#http-actions).

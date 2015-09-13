@@ -24,6 +24,6 @@ class Weather extends Generic
         $this->title        = $title;
         $this->tinyIcon     = $tinyIcon;
         $this->largeIcon    = $largeIcon;
-        $this->locationName = $locationName;
+        $this->locationName = str_limit($locationName, 256);
     }
 }
