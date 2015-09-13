@@ -105,8 +105,8 @@ class Pusher implements LoggerAwareInterface
      * @param $token
      *
      * @throws PebbleApiException
-     * @return array
      *
+     * @return array
      */
     public function listTopics($token)
     {

@@ -7,8 +7,8 @@ trait Generator
 {
     /**
      * @throws UnknownParameterException
-     * @return array
      *
+     * @return array
      */
     public function generate()
     {
@@ -21,6 +21,7 @@ trait Generator
                 $output[$field] = $value;
             }
         }
+
         return $output;
     }
 
@@ -35,22 +36,18 @@ trait Generator
      * @param mixed $value
      *
      * @throws UnknownParameterException
-     * @return mixed
      *
+     * @return mixed
      */
     protected function generateValue($value)
     {
         switch (true) {
-
             case is_array($value):
                 return $this->generateArray($value);
-
             case !is_object($value):
                 return $value;
-
             case ($value instanceof DateTime):
                 return $value->format(Pin::TIME_FORMAT);
-
             case ($value instanceof GeneratorInterface):
                 return $value->generate();
         }

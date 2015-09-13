@@ -3,9 +3,9 @@ namespace Valorin\PinPusher\Pin\Action;
 
 class Http extends Base
 {
-    const GET = 'GET';
-    const POST = 'POST';
-    const PUT = 'PUT';
+    const GET    = 'GET';
+    const POST   = 'POST';
+    const PUT    = 'PUT';
     const DELETE = 'DELETE';
 
     /**
@@ -70,6 +70,7 @@ class Http extends Base
 
     /**
      * @param string $method
+     *
      * @return Http
      */
     public function setMethod($method)
@@ -81,6 +82,7 @@ class Http extends Base
 
     /**
      * @param array $headers
+     *
      * @return Http
      */
     public function setHeaders(array $headers)
@@ -92,6 +94,7 @@ class Http extends Base
 
     /**
      * @param string $bodyText
+     *
      * @return Http
      */
     public function setBodyText($bodyText)
@@ -103,6 +106,7 @@ class Http extends Base
 
     /**
      * @param array $bodyJSON
+     *
      * @return Http
      */
     public function setBodyJSON(array $bodyJSON)
@@ -114,6 +118,7 @@ class Http extends Base
 
     /**
      * @param string $successText
+     *
      * @return Http
      */
     public function setSuccessText($successText)
@@ -125,6 +130,7 @@ class Http extends Base
 
     /**
      * @param string $successIcon
+     *
      * @return Http
      */
     public function setSuccessIcon($successIcon)
@@ -136,6 +142,7 @@ class Http extends Base
 
     /**
      * @param string $failureText
+     *
      * @return Http
      */
     public function setFailureText($failureText)
@@ -147,6 +154,7 @@ class Http extends Base
 
     /**
      * @param string $failureIcon
+     *
      * @return Http
      */
     public function setFailureIcon($failureIcon)

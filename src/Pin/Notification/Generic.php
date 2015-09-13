@@ -54,6 +54,7 @@ class Generic extends Base
 
     /**
      * @param string $backgroundColor
+     *
      * @return self
      */
     public function setBackgroundColor($backgroundColor)
