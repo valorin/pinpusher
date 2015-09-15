@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+*None yet.*
+
+## [1.2.0] - 2015-09-15
 ## Added
 - Added `PebbleApiException::getResponse()` to retrieve the original raw API response when a pin push attempt fails.
 - Added `Color::foreground($color)` to easily generate a suitable foreground colour based on the selected background.
@@ -26,6 +30,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Initial proper release of PinPusher.
 - Fully support all options of the Timeline API.
 
-[unreleased]: https://github.com/valorin/pinpusher/compare/v1.0.1...HEAD
+[unreleased]: https://github.com/valorin/pinpusher/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/valorin/pinpusher/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/valorin/pinpusher/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/valorin/pinpusher/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/valorin/pinpusher/compare/6a9c7db...v1.0.0
