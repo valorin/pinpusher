@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ## Added
 - Added `PebbleApiException::getResponse()` to retrieve the original raw API response when a pin push attempt fails.
+- Added `Color::foreground($color)` to easily generate a suitable foreground colour based on the selected background.
 
 ## Updated
 - Limiting `locationName` field to 256 characters.

@@ -146,4 +146,22 @@ class Color
     {
         return in_array($color, self::$colors);
     }
+
+    /**
+     * Returns a colour string for use as a foreground colour with the specified background colour.
+     *
+     * @param string $color
+     *
+     * @return string
+     */
+    public static function foreground($color)
+    {
+        list($red, $green, $blue) = str_split(substr($color, 1), 2);
+
+        $red   = hexdec($red);
+        $green = hexdec($green);
+        $blue  = hexdec($blue);
+
+        return ($red < 100 && $green < 100 && $blue < 100) ? self::WHITE : self::BLACK;
+    }
 }
