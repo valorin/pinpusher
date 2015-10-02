@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 *None yet.*
 
+## [1.2.1] - 2015-10-03
+## Fixed
+- Adam Cooper removed redundant line that causes code breakage: <https://github.com/valorin/pinpusher/pull/1>
+
 ## [1.2.0] - 2015-09-15
 ## Added
 - Added `PebbleApiException::getResponse()` to retrieve the original raw API response when a pin push attempt fails.
@@ -30,7 +34,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Initial proper release of PinPusher.
 - Fully support all options of the Timeline API.
 
-[unreleased]: https://github.com/valorin/pinpusher/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/valorin/pinpusher/compare/v1.2.1...HEAD
+[1.2.0]: https://github.com/valorin/pinpusher/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/valorin/pinpusher/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/valorin/pinpusher/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/valorin/pinpusher/compare/v1.0.0...v1.0.1
