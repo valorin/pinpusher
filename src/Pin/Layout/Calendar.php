@@ -18,7 +18,6 @@ class Calendar extends Generic
      */
     public function __construct($title)
     {
-        $this->type  = self::TYPE;
         $this->title = $title;
     }
 
