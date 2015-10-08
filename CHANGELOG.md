@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
-*None yet.*
+###
+- Added `Color::random()` to retrieve a random supported color.
 
 ## [1.2.1] - 2015-10-03
 ## Fixed

@@ -164,4 +164,14 @@ class Color
 
         return ($red < 100 && $green < 100 && $blue < 100) ? self::WHITE : self::BLACK;
     }
+
+    /**
+     * Returns a random colour from the list of supported colours.
+     *
+     * @return string
+     */
+    public static function random()
+    {
+        return self::$colors[array_rand(self::$colors)];
+    }
 }
