@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
-###
+### Added
+- Added primary and secondary colors for layouts.
 - Added `Color::random()` to retrieve a random supported color.
 
 ## [1.2.1] - 2015-10-03
