@@ -21,6 +21,16 @@ class Generic extends Base
     protected $backgroundColor;
 
     /**
+     * @var string
+     */
+    protected $primaryColor;
+
+    /**
+     * @var string
+     */
+    protected $secondaryColor;
+
+    /**
      * @var array
      */
     protected $headings;
@@ -101,6 +111,30 @@ class Generic extends Base
     public function setLastUpdated(DateTime $lastUpdated)
     {
         $this->lastUpdated = $lastUpdated;
+
+        return $this;
+    }
+
+    /**
+     * @param string $primaryColor
+     *
+     * @return self
+     */
+    public function setPrimaryColor($primaryColor)
+    {
+        $this->primaryColor = $primaryColor;
+
+        return $this;
+    }
+
+    /**
+     * @param string $secondaryColor
+     *
+     * @return self
+     */
+    public function setSecondaryColor($secondaryColor)
+    {
+        $this->secondaryColor = $secondaryColor;
 
         return $this;
     }
