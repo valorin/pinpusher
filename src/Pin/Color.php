@@ -162,7 +162,7 @@ class Color
         $green = hexdec($green);
         $blue  = hexdec($blue);
 
-        return ($red < 100 && $green < 100 && $blue < 200) ? self::WHITE : self::BLACK;
+        return ($red < 200 && $green < 100 && $blue < 200) ? self::WHITE : self::BLACK;
     }
 
     /**
