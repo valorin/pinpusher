@@ -11,7 +11,7 @@ class Pin
 {
     use Generator;
 
-    const TIME_FORMAT = 'Y-m-d\TH:i:s\Z';
+    const TIME_FORMAT = 'c';
 
     /**
      * @var DateTime
