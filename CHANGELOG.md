@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 *No changes*
 
+## [1.3.1] - 2016-01-11
+### Fixed
+- Fixed bug with ISO date time format, changed format to use standard PHP ISO 8601 date format.
+- Fixed bug with optional time on notifications breaking expected format.
+
+Thanks to [@logbon72](https://github.com/logbon72) for these fixes!
+
 ## [1.3.0] - 2015-10-30
 ### Added
 - Added primary and secondary colors for layouts.
@@ -42,7 +49,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Initial proper release of PinPusher.
 - Fully support all options of the Timeline API.
 
-[unreleased]: https://github.com/valorin/pinpusher/compare/v1.3.0...HEAD
+[unreleased]: https://github.com/valorin/pinpusher/compare/v1.3.1...HEAD
+[1.3.1]: https://github.com/valorin/pinpusher/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/valorin/pinpusher/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/valorin/pinpusher/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/valorin/pinpusher/compare/v1.1.0...v1.2.0

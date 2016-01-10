@@ -16,7 +16,9 @@ composer require valorin/pinpusher
 
 ## Support
 
-You can find me as `valorin` in the [PebbleDev Slack channel](http://slack.pbldev.io/), or email me directly (it's in `composer.json`).
+You can find me as `valorin` in the [PebbleDev Slack channel](http://slack.pbldev.io/), or email me directly at `stephen@rees-carter.net`.
+
+Please email me directly if you find any security issues. You can find encryption details at <https://keybase.io/valorin> if you need them.
 
 ## Examples
 
