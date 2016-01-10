@@ -76,6 +76,7 @@ class Generic extends Base
             ];
 
             unset($data['layout']['time']);
+
             return $data;
         }
 

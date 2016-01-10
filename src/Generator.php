@@ -46,9 +46,9 @@ trait Generator
                 return $this->generateArray($value);
             case !is_object($value):
                 return $value;
-            case ($value instanceof DateTime):
+            case $value instanceof DateTime:
                 return $value->format(Pin::TIME_FORMAT);
-            case ($value instanceof GeneratorInterface):
+            case $value instanceof GeneratorInterface:
                 return $value->generate();
         }
 
