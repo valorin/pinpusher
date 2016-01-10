@@ -70,10 +70,13 @@ class Generic extends Base
     public function generate()
     {
         if ($this->time) {
-            return [
+            $data = [
                 'time'   => $this->time->format(Pin::TIME_FORMAT),
                 'layout' => parent::generate(),
             ];
+
+            unset($data['layout']['time']);
+            return $data;
         }
 
         return [
