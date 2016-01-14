@@ -6,6 +6,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 *No changes*
 
+## [1.3.2] - 2016-01-15
+### Added
+- Added `shortSubtitle` field in generic layout, making it usable by all layouts.
+- Added `displayTime` field in weather layout.
+- Added `primaryColor` field in generic notification.
+- Added new icons in `Valorin\PinPusher\Pin\Icon`:
+  - `NOTIFICATION_LIGHTHOUSE`
+  - `SUNRISE`
+  - `SUNSET`
+  - `BASKETBALL`
+  - `INCOMING_PHONE_CALL`
+  - `DURING_PHONE_CALL_CENTERED`
+  - `DISMISSED_PHONE_CALL`
+  - `SETTINGS`
+  - `LOCATION`
+
 ## [1.3.1] - 2016-01-11
 ### Fixed
 - Fixed bug with ISO date time format, changed format to use standard PHP ISO 8601 date format.
@@ -49,7 +65,8 @@ Thanks to [@logbon72](https://github.com/logbon72) for these fixes!
 - Initial proper release of PinPusher.
 - Fully support all options of the Timeline API.
 
-[unreleased]: https://github.com/valorin/pinpusher/compare/v1.3.1...HEAD
+[unreleased]: https://github.com/valorin/pinpusher/compare/v1.3.2...HEAD
+[1.3.2]: https://github.com/valorin/pinpusher/compare/v1.3.1...v1.3.2
 [1.3.1]: https://github.com/valorin/pinpusher/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/valorin/pinpusher/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/valorin/pinpusher/compare/v1.2.0...v1.2.1
