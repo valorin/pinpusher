@@ -23,6 +23,11 @@ class Generic extends Base
     protected $backgroundColor;
 
     /**
+     * @var string
+     */
+    protected $primaryColor;
+
+    /**
      * @param $title
      * @param $tinyIcon
      */
@@ -60,6 +65,18 @@ class Generic extends Base
     public function setBackgroundColor($backgroundColor)
     {
         $this->backgroundColor = $backgroundColor;
+
+        return $this;
+    }
+
+    /**
+     * @param string $primaryColor
+     *
+     * @return self
+     */
+    public function setPrimaryColor($primaryColor)
+    {
+        $this->primaryColor = $primaryColor;
 
         return $this;
     }

@@ -14,6 +14,11 @@ class Weather extends Generic
     protected $locationName;
 
     /**
+     * @var string
+     */
+    protected $displayTime;
+
+    /**
      * @param string $title
      * @param string $tinyIcon
      * @param string $largeIcon
@@ -25,5 +30,12 @@ class Weather extends Generic
         $this->tinyIcon     = $tinyIcon;
         $this->largeIcon    = $largeIcon;
         $this->locationName = str_limit($locationName, 256);
+    }
+
+    public function setDisplayTime($displayTime)
+    {
+        $this->displayTime = $displayTime;
+
+        return $this;
     }
 }

@@ -46,6 +46,11 @@ class Generic extends Base
     protected $lastUpdated;
 
     /**
+     * @var string
+     */
+    protected $shortSubtitle;
+
+    /**
      * @param string $title
      * @param string $tinyIcon
      */
@@ -135,6 +140,18 @@ class Generic extends Base
     public function setSecondaryColor($secondaryColor)
     {
         $this->secondaryColor = $secondaryColor;
+
+        return $this;
+    }
+
+    /**
+     * @param string $shortSubtitle
+     *
+     * @return self
+     */
+    public function setShortSubtitle($shortSubtitle)
+    {
+        $this->shortSubtitle = $shortSubtitle;
 
         return $this;
     }
