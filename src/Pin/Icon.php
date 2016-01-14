@@ -6,6 +6,7 @@ class Icon
     const NOTIFICATION_GENERIC              = 'system://images/NOTIFICATION_GENERIC';
     const NOTIFICATION_REMINDER             = 'system://images/NOTIFICATION_REMINDER';
     const NOTIFICATION_FLAG                 = 'system://images/NOTIFICATION_FLAG';
+    const NOTIFICATION_LIGHTHOUSE           = 'system://images/NOTIFICATION_LIGHTHOUSE';
     const NOTIFICATION_FACEBOOK_MESSENGER   = 'system://images/NOTIFICATION_FACEBOOK_MESSENGER';
     const NOTIFICATION_WHATSAPP             = 'system://images/NOTIFICATION_WHATSAPP';
     const NOTIFICATION_GMAIL                = 'system://images/NOTIFICATION_GMAIL';
@@ -38,11 +39,14 @@ class Icon
     const TIMELINE_WEATHER                  = 'system://images/TIMELINE_WEATHER';
     const TIMELINE_SUN                      = 'system://images/TIMELINE_SUN';
     const RAINING_AND_SNOWING               = 'system://images/RAINING_AND_SNOWING';
+    const SUNRISE                           = 'system://images/SUNRISE';
+    const SUNSET                            = 'system://images/SUNSET';
     const TIMELINE_MISSED_CALL              = 'system://images/TIMELINE_MISSED_CALL';
     const TIMELINE_CALENDAR                 = 'system://images/TIMELINE_CALENDAR';
     const TIMELINE_SPORTS                   = 'system://images/TIMELINE_SPORTS';
     const TIMELINE_BASEBALL                 = 'system://images/TIMELINE_BASEBALL';
     const AMERICAN_FOOTBALL                 = 'system://images/AMERICAN_FOOTBALL';
+    const BASKETBALL                        = 'system://images/BASKETBALL';
     const CRICKET_GAME                      = 'system://images/CRICKET_GAME';
     const SOCCER_GAME                       = 'system://images/SOCCER_GAME';
     const HOCKEY_GAME                       = 'system://images/HOCKEY_GAME';
@@ -54,14 +58,18 @@ class Icon
     const STOCKS_EVENT                      = 'system://images/STOCKS_EVENT';
     const MUSIC_EVENT                       = 'system://images/MUSIC_EVENT';
     const BIRTHDAY_EVENT                    = 'system://images/BIRTHDAY_EVENT';
+    const NEWS_EVENT                        = 'system://images/NEWS_EVENT';
+    const SCHEDULED_EVENT                   = 'system://images/SCHEDULED_EVENT';
+    const MOVIE_EVENT                       = 'system://images/MOVIE_EVENT';
+    const NO_EVENTS                         = 'system://images/NO_EVENTS';
     const PAY_BILL                          = 'system://images/PAY_BILL';
     const HOTEL_RESERVATION                 = 'system://images/HOTEL_RESERVATION';
     const TIDE_IS_HIGH                      = 'system://images/TIDE_IS_HIGH';
-    const NEWS_EVENT                        = 'system://images/NEWS_EVENT';
-    const SCHEDULED_EVENT                   = 'system://images/SCHEDULED_EVENT';
+    const INCOMING_PHONE_CALL               = 'system://images/INCOMING_PHONE_CALL';
     const DURING_PHONE_CALL                 = 'system://images/DURING_PHONE_CALL';
+    const DURING_PHONE_CALL_CENTERED        = 'system://images/DURING_PHONE_CALL_CENTERED';
+    const DISMISSED_PHONE_CALL              = 'system://images/DISMISSED_PHONE_CALL';
     const CHECK_INTERNET_CONNECTION         = 'system://images/CHECK_INTERNET_CONNECTION';
-    const MOVIE_EVENT                       = 'system://images/MOVIE_EVENT';
     const GLUCOSE_MONITOR                   = 'system://images/GLUCOSE_MONITOR';
     const ALARM_CLOCK                       = 'system://images/ALARM_CLOCK';
     const CAR_RENTAL                        = 'system://images/CAR_RENTAL';
@@ -69,9 +77,10 @@ class Icon
     const RADIO_SHOW                        = 'system://images/RADIO_SHOW';
     const AUDIO_CASSETTE                    = 'system://images/AUDIO_CASSETTE';
     const SCHEDULED_FLIGHT                  = 'system://images/SCHEDULED_FLIGHT';
-    const NO_EVENTS                         = 'system://images/NO_EVENTS';
     const REACHED_FITNESS_GOAL              = 'system://images/REACHED_FITNESS_GOAL';
     const DAY_SEPARATOR                     = 'system://images/DAY_SEPARATOR';
     const WATCH_DISCONNECTED                = 'system://images/WATCH_DISCONNECTED';
     const TV_SHOW                           = 'system://images/TV_SHOW';
+    const LOCATION                          = 'system://images/LOCATION';
+    const SETTINGS                          = 'system://images/SETTINGS';
 }
