@@ -188,11 +188,16 @@ class Pusher implements LoggerAwareInterface
     {
         $response = (new Client)->$method($url, $request);
 
-        if ($response->getStatusCode() != 200) {
+        if ($response->getStatusCode() !== 200) {
             $error = $this->parseError($response->getStatusCode());
             $this->log('Error Received: '.$error, [$response->json()]);
 
-            throw new PebbleApiException($error, $response->getStatusCode(), $response->json());
+            throw new PebbleApiException(
+                $error,
+                $response->getStatusCode(),
+                $response->json(),
+                isset($request['json']) ? $request['json'] : null
+            );
         }
     }
 
