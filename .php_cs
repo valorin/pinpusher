@@ -8,25 +8,23 @@ return Symfony\CS\Config\Config::create()
     ->fixers([
         'align_double_arrow',
         'align_equals',
-        //'concat_with_spaces',
-        'duplicate_semicolon',
-        'extra_empty_lines',
+        'ereg_to_preg',
         'multiline_spaces_before_semicolon',
-        'namespace_no_leading_whitespace',
-        'newline_after_open_tag',
         'no_blank_lines_before_namespace',
-        'no_empty_lines_after_phpdocs',
         'ordered_use',
+        'php4_constructor',
         'phpdoc_order',
-        'phpdoc_params',
-        'remove_lines_between_uses',
-        'single_blank_line_before_namespace',
-        'unused_use',
         'short_array_syntax',
+        'short_echo_tag',
+        //'strict',
+        //'strict_param',
 
         // Disabled
-        '-psr0',
+        '-blankline_after_open_tag',
+        '-header_comment',
         '-new_with_braces',
+        '-psr0',
+        '-single_blank_line_before_namespace',
     ])
     ->setUsingCache(true)
     ->finder($finder);
