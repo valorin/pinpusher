@@ -60,7 +60,7 @@ class Pin
      */
     public function __construct($id, DateTime $time, Layout $layout)
     {
-        $this->time   = $time;
+        $this->time   = $time->copy();
         $this->layout = $layout;
         $this->id     = $id;
     }

@@ -1,6 +1,7 @@
 <?php
 namespace Valorin\PinPusher\Pin\Reminder;
 
+use DateTime;
 use Valorin\PinPusher\Pin;
 use Valorin\PinPusher\Pin\Layout\Base;
 
@@ -17,20 +18,20 @@ class Generic extends Base
     protected $locationName;
 
     /**
-     * @var
+     * @var DateTime
      */
     private $time;
 
     /**
-     * @param $time
-     * @param $title
-     * @param $tinyIcon
+     * @param DateTime $time
+     * @param string   $title
+     * @param string   $tinyIcon
      */
-    public function __construct($time, $title, $tinyIcon)
+    public function __construct(DateTime $time, $title, $tinyIcon)
     {
         $this->title    = $title;
         $this->tinyIcon = $tinyIcon;
-        $this->time     = $time;
+        $this->time     = $time->copy();
     }
 
     /**
