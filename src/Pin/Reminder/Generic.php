@@ -31,7 +31,7 @@ class Generic extends Base
     {
         $this->title    = $title;
         $this->tinyIcon = $tinyIcon;
-        $this->time     = $time->copy();
+        $this->time     = clone $time;
     }
 
     /**

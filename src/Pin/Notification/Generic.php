@@ -52,7 +52,7 @@ class Generic extends Base
      */
     public function setTime(DateTime $time)
     {
-        $this->time = $time->copy();
+        $this->time = clone $time;
 
         return $this;
     }
