@@ -16,7 +16,7 @@ class GenericTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('time', $generated);
         $this->assertArrayHasKey('layout', $generated);
         $this->assertArrayNotHasKey('time', $generated['layout']);
-        $this->assertEquals($time, $generated['time']);
+        $this->assertEquals($time->format(Pin::TIME_FORMAT), $generated['time']);
         $this->assertEquals('genericNotification', $generated['layout']['type']);
         $this->assertEquals('generic title', $generated['layout']['title']);
         $this->assertEquals(Icon::NOTIFICATION_BLACKBERRY_MESSENGER, $generated['layout']['tinyIcon']);

@@ -66,6 +66,6 @@ trait Generator
             return $string;
         }
 
-        return substr($string, 0, 253) . '...';
+        return substr($string, 0, 253).'...';
     }
 }
