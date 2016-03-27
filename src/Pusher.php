@@ -202,10 +202,10 @@ class Pusher implements LoggerAwareInterface
     }
 
     /**
-     * @param $message
-     * @param $context
+     * @param string $message
+     * @param array  $context
      */
-    protected function log($message, $context)
+    protected function log($message, array $context = [])
     {
         if (!$this->logger) {
             return;
