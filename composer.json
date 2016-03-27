@@ -2,6 +2,16 @@
     "name": "valorin/pinpusher",
     "description": "Simple Pebble Timeline Pin API wrapper, with full support for all of the Pebble Timeline API options.",
     "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stephen Rees-Carter",
+            "email": "stephen@rees-carter.net"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    },
     "require": {
         "psr/log": "^1.0",
         "guzzlehttp/guzzle": "^5.2"
@@ -10,12 +20,5 @@
         "psr-4": {
             "Valorin\\PinPusher\\": "src/"
         }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Stephen Rees-Carter",
-            "email": "stephen@rees-carter.net"
-        }
-    ]
+    }
 }

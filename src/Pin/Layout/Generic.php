@@ -115,7 +115,7 @@ class Generic extends Base
      */
     public function setLastUpdated(DateTime $lastUpdated)
     {
-        $this->lastUpdated = $lastUpdated;
+        $this->lastUpdated = clone $lastUpdated;
 
         return $this;
     }

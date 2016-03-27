@@ -54,4 +54,18 @@ trait Generator
 
         throw new UnknownParameterException();
     }
+
+    /**
+     * @param string $string
+     *
+     * @return string
+     */
+    protected function truncate($string)
+    {
+        if (strlen($string) < 254) {
+            return $string;
+        }
+
+        return substr($string, 0, 253) . '...';
+    }
 }
