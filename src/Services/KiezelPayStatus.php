@@ -133,4 +133,19 @@ class KiezelPayStatus
     {
         return $this->trialDurationInSeconds;
     }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return [
+            'status'                 => $this->status,
+            'paymentCode'            => $this->paymentCode,
+            'purchaseStatus'         => $this->purchaseStatus,
+            'checksum'               => $this->checksum,
+            'validityPeriodInDays'   => $this->validityPeriodInDays,
+            'trialDurationInSeconds' => $this->trialDurationInSeconds,
+        ];
+    }
 }
