@@ -4,7 +4,7 @@ namespace Valorin\PinPusher;
 class PebbleApiException extends \Exception
 {
     /**
-     * @var array
+     * @var string
      */
     private $response;
 
@@ -16,10 +16,10 @@ class PebbleApiException extends \Exception
     /**
      * @param string $message
      * @param int    $code
-     * @param array  $response
+     * @param string $response
      * @param array  $pin
      */
-    public function __construct($message, $code, $response = [], $pin = [])
+    public function __construct($message, $code, $response = null, $pin = [])
     {
         parent::__construct($message, $code);
 
@@ -28,7 +28,7 @@ class PebbleApiException extends \Exception
     }
 
     /**
-     * @return array
+     * @return string
      */
     public function getResponse()
     {

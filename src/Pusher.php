@@ -182,7 +182,7 @@ class Pusher implements LoggerAwareInterface
      * @param $url
      * @param $request
      *
-     * @throws PebbleApiException
+     * @throws \Valorin\PinPusher\PebbleApiException
      */
     protected function request($method, $url, $request)
     {
@@ -190,14 +190,16 @@ class Pusher implements LoggerAwareInterface
 
         if ($response->getStatusCode() !== 200) {
             $error = $this->parseError($response->getStatusCode());
-            $data  = json_decode($response->getBody(), true);
 
-            $this->log('Error Received: '.$error, [$data]);
+            $this->log('Error Received: '.$error, [
+                'code' => $response->getStatusCode(),
+                'body' => $response->getBody(),
+            ]);
 
             throw new PebbleApiException(
                 $error,
                 $response->getStatusCode(),
-                $data,
+                $response->getBody(),
                 isset($request['json']) ? $request['json'] : null
             );
         }
