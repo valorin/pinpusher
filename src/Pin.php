@@ -62,7 +62,7 @@ class Pin
     {
         $this->time   = clone $time;
         $this->layout = $layout;
-        $this->id     = $id;
+        $this->id     = (string) $id;
     }
 
     /**
